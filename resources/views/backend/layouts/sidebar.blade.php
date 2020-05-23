@@ -2,16 +2,16 @@
  <div class="col-lg-2 sidebar">
 
      <div id="navbar" class="collapse navbar-collapse">
-         <div class="col-lg-12 logo-placeholder" style="padding-left: 10px;">
+         <div class="col-lg-12 logo-placeholder" style="margin-bottom: 10px; margin-top: 10px;">
              <!-- <img class="img-responsive logo" src="{{asset('public/backend')}}/img/logo.png"> -->
-             <img class="img-responsive logo" src="{{asset('public/backend')}}/img/sagor.png">
+             <img class="img-responsive logo" src="{{asset('public/backend')}}/img/AFL.png">
              <!-- <img class="img-responsive logo" src="{{asset('public/backend')}}/img/QFL-Logo_inner.png"> -->
          </div>
 
          <div id='cssmenu' class="col-lg-12">
              <ul>
             @if(Auth::user()->usertype=='Super Admin')
-                 <li class='active has-sub'><a href='#'><span>User</span></a>
+                 <li class='active has-sub'><a href='#'><span>HR Dept</span></a>
                      <ul>
                          <li class='active has-sub'><a href='#'><span>User Manage </span></a>
                              <ul>
@@ -31,7 +31,7 @@
                      </ul>
                  </li>
                 
-                    <li class='active has-sub'><a href='#'><span>Purchase</span></a>
+                    <li class='active has-sub'><a href='#'><span>Accounts Dept</span></a>
                      <ul>
                          <li class='active has-sub'><a href='#'><span>Requisition</span></a>
                              <ul>
@@ -57,6 +57,59 @@
 
                      </ul>
                  </li>
+                  <li class='active has-sub'><a href='#'><span>Purchase Dept</span></a>
+                     <ul>
+                         <li class='active has-sub'><a href='#'><span>Requisition</span></a>
+                             <ul>
+                                 <li><a href="{{asset('public/backend')}}/requisition"><span>Requisition</span></a></li>
+
+
+                                 <li><a href="{{asset('public/backend')}}/viewapprovedlist"><span>Requisition Approved List</span></a></li>
+
+                             </ul>
+                         </li>
+
+
+                         <li class='active has-sub'><a href='#'><span>Purchase Order</span></a>
+                             <ul>
+
+                                 <li><a href="{{asset('public/backend')}}/purchase_order"><span>Purchase Order</span></a></li>
+
+
+                                 <li><a href="{{asset('public/backend')}}/purchase_order_approved_list"><span>Order Approved List</span></a></li>
+
+                             </ul>
+                         </li>
+
+                     </ul>
+                 </li>
+                  <li class='active has-sub'><a href='#'><span>Sales Dept</span></a>
+                     <ul>
+                         <li class='active has-sub'><a href='#'><span>Requisition</span></a>
+                             <ul>
+                                 <li><a href="{{asset('public/backend')}}/requisition"><span>Requisition</span></a></li>
+
+
+                                 <li><a href="{{asset('public/backend')}}/viewapprovedlist"><span>Requisition Approved List</span></a></li>
+
+                             </ul>
+                         </li>
+
+
+                         <li class='active has-sub'><a href='#'><span>Purchase Order</span></a>
+                             <ul>
+
+                                 <li><a href="{{asset('public/backend')}}/purchase_order"><span>Purchase Order</span></a></li>
+
+
+                                 <li><a href="{{asset('public/backend')}}/purchase_order_approved_list"><span>Order Approved List</span></a></li>
+
+                             </ul>
+                         </li>
+
+                     </ul>
+                 </li>
+                  
                 @endif
                  
                  <li class='active has-sub'><a href='#'><span>Inventory</span></a>

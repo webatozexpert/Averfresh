@@ -1,23 +1,25 @@
 @extends('backend.layouts.master')
 @section('content')
 
-    
-    <!-- Main Body -->
-    <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 col-sm-12 main">
+
+<!-- Main Body -->
+<div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 col-sm-12 main">
 
 
 
-      <!-- The following session is added for showing flash messages ~~~~~~~~ -->
-            <!-- The following session is added for showing flash messages ~~~~~~~~ -->
+    <!-- The following session is added for showing flash messages ~~~~~~~~ -->
+    <!-- The following session is added for showing flash messages ~~~~~~~~ -->
 
-      <div class="row">
-    <div class="page-header col-lg-12 ">
-        <center><h3> Password Change </h3></h3></center>
+    <div class="row">
+        <div class="page-header col-lg-12 ">
+            <center>
+                <h3> Password Change </h3>
+            </center>
+        </div>
     </div>
-</div>
-<br><br>
+    <br><br>
 
-<section class="content">
+    <section class="content">
         <div class="container-fluid">
             <!-- /.row -->
             <!-- Main row -->
@@ -31,7 +33,7 @@
                             <form method="post" action="{{route('profile.password.update')}}" id="myForm">
                                 @csrf
                                 <div class="form-row">
-                                   <div class="form-group col-md-4">
+                                    <div class="form-group col-md-4">
                                         <label for="current_password">Current Password</label>
                                         <input type="password" name="current_password" id="current_password" class="form-control">
                                         <font style="color:red">{{($errors->has('password'))?($errors->first('password')):''}}</font>
@@ -46,9 +48,9 @@
                                         <input type="password" name="again_new_password" class="form-control">
                                         <font style="color:red">{{($errors->has('password'))?($errors->first('password')):''}}</font>
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4 ">
 
-                                        <input type="submit" value="update" class="btn btn-primary">
+                                        <input type="submit" value="Update" class="btn btn-primary">
                                     </div>
 
                                 </div>
@@ -63,14 +65,14 @@
             <!-- /.row (main row) -->
         </div><!-- /.container-fluid -->
     </section>
-<!-- /.content-wrapper -->
+    <!-- /.content-wrapper -->
 
-      <!-- The following session is added for showing flash messages ~~~~~~~~ -->
-            <!-- The following session is added for showing flash messages ~~~~~~~~ -->
+    <!-- The following session is added for showing flash messages ~~~~~~~~ -->
+    <!-- The following session is added for showing flash messages ~~~~~~~~ -->
 
 
-      
-    
+
+
 
     <!-- The following session is added for showing flash messages ~~~~~~~~ -->
     <!-- The following session is added for showing flash messages ~~~~~~~~ -->

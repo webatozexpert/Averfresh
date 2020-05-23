@@ -32,7 +32,7 @@
                                 <div class="form-group ">
                                     <label style="margin-bottom:0;" for="email1" class="uname control-label"> <i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i> E-mail
                                     </label>
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Enter your Email">
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required  autofocus placeholder="Enter your Email">
 
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -44,7 +44,7 @@
                                 <div class="form-group ">
                                     <label style="margin-bottom:0;" for="password" class="youpasswd"> <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i> Password
                                     </label>
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Enter your password">
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required  placeholder="Enter your password">
 
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -72,39 +72,39 @@
                         <div id="register" class="animate form">
                             <form action="index.html" id="register_here" autocomplete="on" method="post">
                                 <h3 class="black_bg">
-                                    
+
                                     <br>Sign Up</h3>
                                 <div class="form-group">
                                     <label style="margin-bottom:0;" for="full_name" class="youmail">
                                         <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i> Full Name
                                     </label>
-                                    <input id="full_name" name="full_name" required type="text" placeholder="John" />
+                                    <input id="full_name" name="full_name" required type="text" placeholder="Enter Your Full Name" />
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label style="margin-bottom:0;" for="email" class="youmail">
                                         <i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i> E-mail
                                     </label>
-                                    <input id="email" name="email" placeholder="mysupermail@mail.com" />
+                                    <input id="email" name="email" placeholder="Enter Your Email" />
                                 </div>
                                 <div class="form-group">
                                     <label style="margin-bottom:0;" for="mobile" class="youmail">
                                         <i class="livicon" data-name="mobile" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i> Mobile No
                                     </label>
-                                    <input id="mobile" name="mobile" required type="text" placeholder="Doe" />
+                                    <input id="mobile" name="mobile" required type="text" placeholder="Enter Your Mobile No" />
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label style="margin-bottom:0;" for="password" class="youpasswd">
                                         <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i> Password
                                     </label>
-                                    <input id="password1" name="password" required type="password" placeholder="Password" />
+                                    <input id="password1" name="password" required type="password" placeholder="Enter Your Password" />
                                 </div>
                                 <div class="form-group">
                                     <label style="margin-bottom:0;" for="password_confirm" class="youpasswd">
                                         <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i> Confirm Password
                                     </label>
-                                    <input id="password_confirm" name="password_confirm" required type="password" placeholder="Confirm password" />
+                                    <input id="password_confirm" name="password_confirm" required type="password" placeholder=" Enter Your Confirm password" />
                                 </div>
                                 <p class="signin button">
                                     <input type="submit" class="btn btn-success" value="Sign Up" />
@@ -118,16 +118,16 @@
                         <div id="forgot" class="animate form">
                             <form action="index.html" id="reset_pw" autocomplete="on" method="post">
                                 <h3 class="black_bg">
-                                    
+
                                     <br>FORGOT PASSWORD</h3>
                                 <p>
                                     Enter your email address below and we'll send a special reset password link to your inbox.
                                 </p>
                                 <div class="form-group">
                                     <label style="margin-bottom:0;" for="username2" class="youmai">
-                                        <i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i> Your email
+                                        <i class="livicon" data-name="mail" data-size="16" data-loop="true" data-c="#3c8dbc" data-hc="#3c8dbc"></i>Enter your email address
                                     </label>
-                                    <input id="username2" name="username2" placeholder="your@mail.com" />
+                                    <input id="username2" name="username2" placeholder="Enter your email address" />
                                 </div>
                                 <p class="login button reset_button">
                                     <input type="submit" value="Reset Password" class="btn btn-raised btn-success btn-block" />
