@@ -71,7 +71,7 @@
 
                                         <div class="form-group col-md-4 ">
 
-                                            <input type="submit" value="update" class="btn btn-primary">
+                                            <input type="submit" value="Update" class="btn btn-primary">
                                         </div>
 
                                     </div>

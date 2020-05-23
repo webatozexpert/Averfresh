@@ -76,7 +76,7 @@
 
                                     <div class="form-group col-md-6" style="padding-top:120px;">
 
-                                        <input type="submit" value="update" class="btn btn-primary">
+                                        <input type="submit" value="Update" class="btn btn-primary">
                                     </div>
 
                                 </div>

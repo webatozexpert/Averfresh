@@ -30,7 +30,80 @@
 
                      </ul>
                  </li>
-                
+                  <li class='active has-sub'><a href='#'><span>Pos Inventory </span></a>
+                     <ul>
+
+                         <li class='active has-sub'><a href='#'><span>Inventory Receive</span></a>
+                             <ul>
+
+                                 <li><a href="{{asset('public/backend')}}/inventoryreceive"><span>Stock Receive</span></a></li>
+
+                                 <li><a href="{{asset('public/backend')}}/opening_inventoryreceive"><span>Opening Stock Receive</span></a></li>
+
+                                 <li><a href="{{asset('public/backend')}}/inventoryopeningentry"><span>Opening Inventory (Raw)</span></a></li>
+
+                                 <li><a href="{{asset('public/backend')}}/inv_rec_from_supplier"><span>Inventory Receive From Supplier</span></a></li>
+
+                                 <li><a href="{{asset('public/backend')}}/inv_grn"><span>MRR List</span></a></li>
+
+
+
+                             </ul>
+                         </li>
+
+
+                         <li class='active has-sub'><a href='#'><span>Warehouse</span></a>
+                             <ul>
+
+
+                                 <li class='active has-sub'><a href='#'><span>Raw Materials Transfer</span></a>
+                                     <ul>
+                                         <li><a href="{{asset('public/backend')}}/raw_goods_transfer_list"> <span>Inventory Transfer</span></a></li>
+                                         <li><a href="{{asset('public/backend')}}/raw_transfer_receive"> <span>Inventory Received From Branch</span></a></li>
+                                     </ul>
+                                 </li>
+
+                                 <li><a href="{{asset('public/backend')}}/inventory_disburse"><span>Inventory Disburse</span></a></li>
+                                 <li><a href="{{asset('public/backend')}}/inventory_adjustment"><span>Inventory Adjustment</span></a></li>
+                                 <li><a href="{{asset('public/backend')}}/inventory_balance"><span>Inventory Balance</span></a></li>
+
+                             </ul>
+                         </li>
+
+                         <li class='active has-sub'><a href='#'><span>Purchase Return</span></a>
+                             <ul>
+                                 <li><a href="{{asset('public/backend')}}/purchase_return"><span>Purchase Return to Supplier</span></a></li>
+                             </ul>
+                         </li>
+
+                         <li class='active has-sub'><a href='#'><span>Direct Sales (Purchase)</span></a>
+                             <ul>
+                                 <li><a href="{{asset('public/backend')}}/direct_sales"><span>Direct Sales</span></a></li>
+                             </ul>
+                         </li>
+
+                         <li class='active has-sub'><a href='#'><span>Materials Loan</span></a>
+                             <ul>
+                                 <li><a href="{{asset('public/backend')}}/materials_loan"><span>Materials Loan</span></a></li>
+                             </ul>
+                         </li>
+
+                     </ul>
+                 </li>
+
+
+                 <!-- <li><a href="/contacts" title="Contacts"><span>Contact Us</span></a></li> -->
+                 <li><a href="{{route('profile.password.view')}}" title="Account Settings"><span>Change Password</span></a></li>
+                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();" title="Sign-Out">
+                         <span>Logout</span></a></li>
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                     @csrf
+                 </form>
+                 
+                 @endif
+                 
+                 @if(Auth::user()->usertype=='Admin')
                     <li class='active has-sub'><a href='#'><span>Accounts Dept</span></a>
                      <ul>
                          <li class='active has-sub'><a href='#'><span>Requisition</span></a>
@@ -110,9 +183,7 @@
                      </ul>
                  </li>
                   
-                @endif
-                 
-                 <li class='active has-sub'><a href='#'><span>Inventory</span></a>
+                     <li class='active has-sub'><a href='#'><span>Inventory</span></a>
                      <ul>
 
                          <li class='active has-sub'><a href='#'><span>Inventory Receive</span></a>
@@ -201,7 +272,7 @@
                          <li class='last'></li>
                      </ul>
                  </li>
-               
+                  
 
 
                  <!-- <li><a href="/contacts" title="Contacts"><span>Contact Us</span></a></li> -->
@@ -212,7 +283,7 @@
                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                      @csrf
                  </form>
-                   
+                 @endif
              </ul>
 
          </div>
