@@ -98,9 +98,75 @@
 
 
 
-    @include('backend.include.footer')
+    @include('backend.layouts.footer')
 
 </div><!-- .main -->
 <!-- End Main Body -->
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+  
+  $('#myForm').validate({
+    rules: {
+      usertype: {
+        required: true,
+        
+      },
+      name: {
+        required: true,
+        
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      password: {
+        required: true,
+        minlength: 8
+      },
+      password2: {
+        required: true,
+        equalTo: '#password'
+      },
+    },
+    messages: {
+      usertype: {
+        required: "Please select user role",
+       
+      },
+      name: {
+        required: "Please enter your name",
+        
+      },
+      email: {
+        required: "Please enter a email address",
+        email: "Please enter a <em>valid</em> email address"
+      },
+      password: {
+        required: "Please enter your password",
+        minlength: "Your password must be at least 8 characters long"
+      },
+      password2: {
+        required: "Please enter confirm password",
+        equalTo: "confirm password does not match"
+      },
+      
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>
+
 
 @endsection

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,16 +39,7 @@
     <!-- <link type="text/css" href="{{asset('public/backend')}}/css/bootstrap-switch.css" rel="stylesheet"> -->
     <!-- end bootstrap slider ~~~~~~~~~~~~~~  -->
 
- <!-- jQuery -->
-    <script src="{{asset('public/backend')}}/js/jquery-3.5.1.js"></script>
 
-    <style>
-        .notifyjs-corner {
-            z-index: 10000 !improtant
-        }
-
-    </style>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.js"></script>
     <!-- <link type="text/css" href="jquery.datetimepicker.css"/ > -->
     <!-- <link type="text/css" href="{{asset('public/backend')}}/lib/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet"> -->
 
@@ -63,3 +56,34 @@
     <script src="{{asset('public/backend')}}/js/ladda.min.js"></script>
     <!-- end for submit -->
 
+
+
+<style type="text/css" class="init">
+    /* Ensure that the demo table scrolls */
+    th,
+    td {
+        white-space: nowrap;
+    }
+
+    div.dataTables_wrapper {
+        margin: 0 auto;
+    }
+
+</style>
+</head>
+
+<body>
+
+ <div class="top-bar navbar-fixed-top">
+     <nav class="navbar navbar-custom navbar-default" role="navigation">
+         <div class="navbar-header">
+             <a class="navbar-brand company_name">User : {{ Auth::user()->name }}</a>
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar icon-bar-inverse"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </button>
+         </div>
+     </nav>
+ </div>

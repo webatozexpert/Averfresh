@@ -87,4 +87,17 @@ Route::prefix('purchase')->group(function(){
 
 
 });
-Route::get('/get-category', 'Backend\DefaultController@getCategory')->name('get-category');
+Route::get('/findQty', 'Backend\DefaultController@findQty')->name('findQty');
+Route::get('/findProductName', 'Backend\DefaultController@findProductName')->name('findProductName');
+
+
+Route::get('/select','Backend\PurchaseController@testfunction');
+Route::get('/prodview','Backend\PurchaseController@prodfunct');
+
+Route::get('/findProductName','Backend\PurchaseController@findProductName');
+
+Route::get('/findPrice','Backend\PurchaseController@findPrice');
+
+
+
+

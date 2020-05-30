@@ -123,7 +123,7 @@
 
 
 
-    @include('backend.include.footer')
+    @include('backend.layouts.footer')
 
 </div><!-- .main -->
 <!-- End Main Body -->

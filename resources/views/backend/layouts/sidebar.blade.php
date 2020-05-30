@@ -2,7 +2,7 @@
  <div class="col-lg-2 sidebar">
 
      <div id="navbar" class="collapse navbar-collapse">
-         <div class="col-lg-12 logo-placeholder" style="margin-bottom: 10px; margin-top: 10px;">
+         <div  class="col-lg-12 logo-placeholder" style="margin-bottom: 10px; margin-top: 10px;">
              <!-- <img class="img-responsive logo" src="{{asset('public/backend')}}/img/logo.png"> -->
              <img class="img-responsive logo" src="{{asset('public/backend')}}/img/AFL.png">
              <!-- <img class="img-responsive logo" src="{{asset('public/backend')}}/img/QFL-Logo_inner.png"> -->
@@ -11,6 +11,12 @@
          <div id='cssmenu' class="col-lg-12">
              <ul>
             @if(Auth::user()->usertype=='Super Admin')
+            <li class="active">
+                            <a href="{{route('home')}}">
+                                <i class="livicon" data-name="home" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
+                                <span class="title">Dashboard</span>
+                            </a>
+                        </li>
                  <li class='active has-sub'><a href='#'><span>HR Dept</span></a>
                      <ul>
                          <li class='active has-sub'><a href='#'><span>User Manage </span></a>
@@ -33,64 +39,65 @@
                   <li class='active has-sub'><a href='#'><span>Pos Inventory </span></a>
                      <ul>
 
-                         <li class='active has-sub'><a href='#'><span>Inventory Receive</span></a>
+                         <li class='active has-sub'><a href='#'><span>Supplier</span></a>
                              <ul>
 
-                                 <li><a href="{{asset('public/backend')}}/inventoryreceive"><span>Stock Receive</span></a></li>
-
-                                 <li><a href="{{asset('public/backend')}}/opening_inventoryreceive"><span>Opening Stock Receive</span></a></li>
-
-                                 <li><a href="{{asset('public/backend')}}/inventoryopeningentry"><span>Opening Inventory (Raw)</span></a></li>
-
-                                 <li><a href="{{asset('public/backend')}}/inv_rec_from_supplier"><span>Inventory Receive From Supplier</span></a></li>
-
-                                 <li><a href="{{asset('public/backend')}}/inv_grn"><span>MRR List</span></a></li>
-
-
-
+                                 <li><a href="{{route('suppliers.view')}}"><span>View Suppliers</span></a></li>
                              </ul>
                          </li>
-
-
-                         <li class='active has-sub'><a href='#'><span>Warehouse</span></a>
+                          <li class='active has-sub'><a href='#'><span>Customer</span></a>
                              <ul>
 
-
-                                 <li class='active has-sub'><a href='#'><span>Raw Materials Transfer</span></a>
-                                     <ul>
-                                         <li><a href="{{asset('public/backend')}}/raw_goods_transfer_list"> <span>Inventory Transfer</span></a></li>
-                                         <li><a href="{{asset('public/backend')}}/raw_transfer_receive"> <span>Inventory Received From Branch</span></a></li>
-                                     </ul>
-                                 </li>
-
-                                 <li><a href="{{asset('public/backend')}}/inventory_disburse"><span>Inventory Disburse</span></a></li>
-                                 <li><a href="{{asset('public/backend')}}/inventory_adjustment"><span>Inventory Adjustment</span></a></li>
-                                 <li><a href="{{asset('public/backend')}}/inventory_balance"><span>Inventory Balance</span></a></li>
-
+                                 <li><a href="{{route('customers.view')}}"><span>View Customers</span></a></li>
                              </ul>
                          </li>
-
-                         <li class='active has-sub'><a href='#'><span>Purchase Return</span></a>
+                          <li class='active has-sub'><a href='#'><span>Units</span></a>
                              <ul>
-                                 <li><a href="{{asset('public/backend')}}/purchase_return"><span>Purchase Return to Supplier</span></a></li>
+
+                                 <li><a href="{{route('units.view')}}"><span>View Units</span></a></li>
                              </ul>
                          </li>
-
-                         <li class='active has-sub'><a href='#'><span>Direct Sales (Purchase)</span></a>
+                         <li class='active has-sub'><a href='#'><span>Category</span></a>
                              <ul>
-                                 <li><a href="{{asset('public/backend')}}/direct_sales"><span>Direct Sales</span></a></li>
+
+                                 <li><a href="{{route('categories.view')}}"><span>View Categorys</span></a></li>
                              </ul>
                          </li>
-
-                         <li class='active has-sub'><a href='#'><span>Materials Loan</span></a>
+                         <li class='active has-sub'><a href='#'><span>Product</span></a>
                              <ul>
-                                 <li><a href="{{asset('public/backend')}}/materials_loan"><span>Materials Loan</span></a></li>
+
+                                 <li><a href="{{route('products.view')}}"><span>View Products</span></a></li>
                              </ul>
                          </li>
 
                      </ul>
                  </li>
+                     <li class='active has-sub'><a href='#'><span>Purchase Dept</span></a>
+                     <ul>
+                         <li class='active has-sub'><a href='#'><span>Requisition</span></a>
+                             <ul>
+                                 <li><a href=""><span>Requisition</span></a></li>
 
+
+                                 <li><a href=""><span>Requisition Approved List</span></a></li>
+
+                             </ul>
+                         </li>
+
+
+                         <li class='active has-sub'><a href='#'><span>Purchase Order</span></a>
+                             <ul>
+
+                                 <li><a href="{{route('purchase.view')}}"><span>Purchase Order</span></a></li>
+
+
+                                 <li><a href="{{asset('public/backend')}}/purchase_order_approved_list"><span>Order Approved List</span></a></li>
+
+                             </ul>
+                         </li>
+
+                     </ul>
+                 </li>
 
                  <!-- <li><a href="/contacts" title="Contacts"><span>Contact Us</span></a></li> -->
                  <li><a href="{{route('profile.password.view')}}" title="Account Settings"><span>Change Password</span></a></li>
@@ -130,32 +137,7 @@
 
                      </ul>
                  </li>
-                  <li class='active has-sub'><a href='#'><span>Purchase Dept</span></a>
-                     <ul>
-                         <li class='active has-sub'><a href='#'><span>Requisition</span></a>
-                             <ul>
-                                 <li><a href="{{asset('public/backend')}}/requisition"><span>Requisition</span></a></li>
-
-
-                                 <li><a href="{{asset('public/backend')}}/viewapprovedlist"><span>Requisition Approved List</span></a></li>
-
-                             </ul>
-                         </li>
-
-
-                         <li class='active has-sub'><a href='#'><span>Purchase Order</span></a>
-                             <ul>
-
-                                 <li><a href="{{asset('public/backend')}}/purchase_order"><span>Purchase Order</span></a></li>
-
-
-                                 <li><a href="{{asset('public/backend')}}/purchase_order_approved_list"><span>Order Approved List</span></a></li>
-
-                             </ul>
-                         </li>
-
-                     </ul>
-                 </li>
+                 
                   <li class='active has-sub'><a href='#'><span>Sales Dept</span></a>
                      <ul>
                          <li class='active has-sub'><a href='#'><span>Requisition</span></a>
